@@ -1,6 +1,7 @@
-body {
+.father {
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
+  flex-direction: row-reverse;
 }
 
 .box {
@@ -8,5 +9,7 @@ body {
   height: 200px;
   background-color: tomato;
   display: inline-block;
-  text-align: right;
+  text-align: left;
+  color: white;
+  font-size: 36px;
 }
