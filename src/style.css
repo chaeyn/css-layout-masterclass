@@ -3,8 +3,17 @@
   height: 200px;
   background-color: tomato;
   display: inline-block;
+  text-align: right;
 }
 
 .box:first-child {
-  display: block;
+  float: left;
+}
+
+.box:last-child {
+  float: right;
+}
+
+.box:nth-child(2) {
+  margin: 0 25%;
 }
