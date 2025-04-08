@@ -2,9 +2,8 @@
   display: flex;
   gap: 10px;
   height: 100vh;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  /* flex-flow: row wrap; */
+  justify-content: center;
+  align-items: center;
 }
 
 .box {
@@ -17,4 +16,12 @@
   font-size: 36px;
   justify-content: center;
   align-items: center;
+}
+
+.box:first-child {
+  align-self: flex-start;
+}
+
+.box:last-child {
+  align-self: flex-end;
 }
