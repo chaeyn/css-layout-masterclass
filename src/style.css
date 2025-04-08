@@ -1,33 +1,15 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .father {
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 100px 200px;
+  grid-template-rows: 200px 100px;
+  gap: 10px;
 }
 
-.box {
-  height: 400px;
+.child {
+  background-color: tomato;
+  display: flex;
   color: white;
-  display: flex;
-  font-size: 36px;
-  justify-content: center;
+  font-size: 28px;
   align-items: center;
-}
-
-.box:first-child {
-  background-color: orange;
-  /* flex-grow: 0;
-  flex-shrink: 3;
-  flex-basis: 500px; */
-  flex: 1 0 500px;
-}
-
-.box:last-child {
-  background-color: teal;
-  flex-grow: 1;
+  justify-content: center;
 }
