@@ -21,9 +21,17 @@
 .box:first-child {
   background-color: orange;
   flex-grow: 1;
+  flex-shrink: 3;
+}
+
+.box:nth-child(2) {
+  background-color: tomato;
+  flex-grow: 2;
+  flex-shrink: 5;
 }
 
 .box:last-child {
   background-color: teal;
-  flex-grow: 5;
+  flex-grow: 3;
+  flex-shrink: 0;
 }
