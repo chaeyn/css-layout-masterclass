@@ -5,12 +5,13 @@
 
 .father {
   display: flex;
+  height: 100vh;
   justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 
 .box {
-  height: 200px;
+  height: 400px;
   color: white;
   display: flex;
   font-size: 36px;
@@ -20,18 +21,13 @@
 
 .box:first-child {
   background-color: orange;
-  flex-grow: 1;
+  /* flex-grow: 0;
   flex-shrink: 3;
-}
-
-.box:nth-child(2) {
-  background-color: tomato;
-  flex-grow: 2;
-  flex-shrink: 5;
+  flex-basis: 500px; */
+  flex: 1 0 500px;
 }
 
 .box:last-child {
   background-color: teal;
-  flex-grow: 3;
-  flex-shrink: 0;
+  flex-grow: 1;
 }
