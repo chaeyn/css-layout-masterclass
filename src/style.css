@@ -1,8 +1,9 @@
 .father {
   display: grid;
-  grid-template-columns: 100px 200px 50px;
-  grid-template-rows: 200px 100px;
-  gap: 10px;
+  grid-template-columns: [cucumber] 100px [potato] 200px [banana] 50px [brocoli];
+  grid-template-rows: [korea] 200px [thailand] 100px [greece];
+  row-gap: 10px;
+  column-gap: 20px;
 }
 
 .child {
@@ -16,9 +17,9 @@
 
 .child:last-child {
   background-color: aqua;
-  grid-column: 2 / -1;
+  grid-column: potato / brocoli;
 }
 
 .child:first-child {
-  grid-row: 1 / -1;
+  grid-row: korea / greece;
 }
