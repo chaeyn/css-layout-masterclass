@@ -2,9 +2,9 @@
   display: flex;
   gap: 10px;
   height: 100vh;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  /* flex-flow: row wrap; */
 }
 
 .box {
