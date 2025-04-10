@@ -1,7 +1,7 @@
 # CSS Layout Masterclass
 ## [노마드코더 강의](https://nomadcoders.co/css-layout-masterclass)를 통해 css를 학습합니다.
 
-### 배울 개념
+### 배운 개념
 - Main Axis / Cross Axis
 - Column and Row
 - flex-grow, flex-shrink
