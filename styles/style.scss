@@ -31,24 +31,22 @@ ul {
   }
 }
 
-%alert {
+@mixin alert($bgColor, $borderColor) {
+  background-color: $bgColor;
   margin: 10px;
   padding: 10px 20px;
   border-radius: 10px;
-  border: 1px dashed black;
+  border: 1px dashed $borderColor;
 }
 
 .success {
-  @extend %alert;
-  background-color: green;
+  @include alert(green, blue);
 }
 
 .error {
-  @extend %alert;
-  background-color: tomato;
+  @include alert(tomato, aqua);
 }
 
 .warning {
-  @extend %alert;
-  background-color: yellow;
+  @include alert(yellow, grey);
 }
