@@ -30,3 +30,25 @@ ul {
     }
   }
 }
+
+%alert {
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px dashed black;
+}
+
+.success {
+  @extend %alert;
+  background-color: green;
+}
+
+.error {
+  @extend %alert;
+  background-color: tomato;
+}
+
+.warning {
+  @extend %alert;
+  background-color: yellow;
+}
