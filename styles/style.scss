@@ -1,52 +1,46 @@
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1200px;
 
-ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  gap: 10px;
-
-  li {
-    background-color: tomato;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 7px;
-
-    a {
-      text-decoration: none;
-      color: white;
-      text-transform: uppercase;
-    }
-
-    &:hover {
-      opacity: 0.8;
-
-      a {
-        color: grey;
-      }
-    }
+@mixin smallDevice {
+  @media screen and (min-width: $breakpoint-sm) {
+    @content;
   }
 }
 
-@mixin alert($bgColor, $borderColor) {
-  background-color: $bgColor;
-  margin: 10px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: 1px dashed $borderColor;
+@mixin mediumDevice {
+  @media screen and (min-width: $breakpoint-md) {
+    @content;
+  }
 }
 
-.success {
-  @include alert(green, blue);
+@mixin largeDevice {
+  @media screen and (min-width: $breakpoint-lg) {
+    @content;
+  }
 }
 
-.error {
-  @include alert(tomato, aqua);
+@mixin xlDevice {
+  @media screen and (min-width: $breakpoint-xl) {
+    @content;
+  }
 }
 
-.warning {
-  @include alert(yellow, grey);
+body {
+  @include smallDevice {
+    background-color: blue;
+  }
+
+  @include mediumDevice {
+    background-color: red;
+  }
+
+  @include largeDevice {
+    background-color: green;
+  }
+
+  @include xlDevice {
+    background-color: yellow;
+  }
 }
