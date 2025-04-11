@@ -1,46 +1,31 @@
-$breakpoint-sm: 480px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 1024px;
-$breakpoint-xl: 1200px;
-
-@mixin smallDevice {
-  @media screen and (min-width: $breakpoint-sm) {
-    @content;
-  }
-}
-
-@mixin mediumDevice {
-  @media screen and (min-width: $breakpoint-md) {
-    @content;
-  }
-}
-
-@mixin largeDevice {
-  @media screen and (min-width: $breakpoint-lg) {
-    @content;
-  }
-}
-
-@mixin xlDevice {
-  @media screen and (min-width: $breakpoint-xl) {
-    @content;
-  }
-}
+@import url(./reset.scss);
 
 body {
-  @include smallDevice {
-    background-color: blue;
-  }
+  background-color: #dce6d2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-  @include mediumDevice {
-    background-color: red;
-  }
+.phone {
+  background-color: black;
+  border-radius: 50px;
+  height: 95%;
+  width: 420px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
 
-  @include largeDevice {
-    background-color: green;
-  }
-
-  @include xlDevice {
-    background-color: yellow;
+.header {
+  .header__list {
+    display: flex;
+    color: white;
+    gap: 10px;
+    .header__list-item {
+      border: 1px solid rgba($color: #fff, $alpha: 0.5);
+      padding: 10px;
+      border-radius: 20px;
+    }
   }
 }
