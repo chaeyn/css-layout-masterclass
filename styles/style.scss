@@ -18,14 +18,82 @@ body {
 }
 
 .header {
+  overflow-x: scroll;
   .header__list {
     display: flex;
     color: white;
+    width: max-content;
     gap: 10px;
     .header__list-item {
       border: 1px solid rgba($color: #fff, $alpha: 0.5);
       padding: 10px;
       border-radius: 20px;
+    }
+    .header__list-item--inverted {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+
+.cards {
+  margin: 20px 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+  .cards__card {
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: space-between;
+    .card__title {
+      font-size: 28px;
+    }
+    .card__footer {
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        border-radius: 20px;
+        border: 1px solid black;
+        padding: 5px 10px;
+      }
+      .price {
+        background-color: #fedd2d;
+      }
+      .length {
+        background-color: white;
+      }
+    }
+    &:first-child {
+      background-color: #292d32;
+      border: 1px solid white;
+      .card__title {
+        color: white;
+      }
+    }
+    &:nth-child(2) {
+      background-color: #f6f3ef;
+    }
+    &:nth-child(3) {
+      background-color: #f7fcb0;
+    }
+    &:nth-child(4) {
+      background-color: #baa9f7;
+    }
+    &:nth-child(5) {
+      background-color: #ffd1d1;
+    }
+    &:nth-child(6) {
+      background-color: #ceffdc;
+    }
+    &:nth-child(3n) {
+      grid-column: span 2;
     }
   }
 }
